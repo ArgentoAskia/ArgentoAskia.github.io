@@ -3,7 +3,7 @@
   <entry>
     <title>文章常用标志</title>
     <url>/2019/11/20/%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E6%A0%87%E5%BF%97/</url>
-    <content><![CDATA[<h1 id="常用标识："><a href="#常用标识：" class="headerlink" title="常用标识："></a>常用标识：</h1><p>##title:<br>文章标题</p>
+    <content><![CDATA[<h1 id="常用标识："><a href="#常用标识：" class="headerlink" title="常用标识："></a>常用标识：</h1><h2 id="title"><a href="#title" class="headerlink" title="title:"></a>title:</h2><p>文章标题</p>
 <h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>文章标签，格式可为：<code>[XXXX,XXXX,...]</code> 或者 <code>- XXXXX\n - XXXXXX\n</code></p>
 <h2 id="date"><a href="#date" class="headerlink" title="date:"></a>date:</h2><p>生成日期<br>格式自定义</p>
 <h2 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h2><p>文章分类</p>
