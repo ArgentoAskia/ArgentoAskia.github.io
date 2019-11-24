@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Hexo</title>
+  <title>Askia&#39;s note</title>
   
   
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2019-11-20T10:17:17.178Z</updated>
+  <updated>2019-11-24T15:53:37.259Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>John Doe</name>
+    <name>Askia</name>
     
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>stdarg.h实现可变参数</title>
+    <link href="http://yoursite.com/2019/11/24/stdarg-h%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0/"/>
+    <id>http://yoursite.com/2019/11/24/stdarg-h%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0/</id>
+    <published>2019-11-24T15:50:02.000Z</published>
+    <updated>2019-11-24T15:53:37.259Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="stdarg-h实现可变参数"><a href="#stdarg-h实现可变参数" class="headerlink" title="stdarg.h实现可变参数"></a>stdarg.h实现可变参数</h2><ol><li>本篇谈论用标准库stdarg.h实现不定参数的方方面面（11/24/2019 11:48:35 PM ）</li><li>小技巧：实现格式输入、输出（见更新）</li></ol><h3 id="stdarg-h的介绍"><a href="#stdarg-h的介绍" class="headerlink" title="stdarg.h的介绍"></a>stdarg.h的介绍</h3><p>stdarg.h是C语言中C标准函数库的头文件，stdarg是由<strong>standard（标准） arguments（参数）</strong>简化而来。</p><p>我们常常看到一些函数形如：<strong>printf(const char *fomat,…);</strong><br>这类型的函数就可以用该标准头文件实现。</p><h3 id="包含成员"><a href="#包含成员" class="headerlink" title="包含成员"></a>包含成员</h3><p><strong>va_list:</strong> </p><p>用来保存<strong>va_start()</strong>、<strong>va_arg()</strong> 和 <strong>va_end()</strong> 这三个宏存储信息的类型。</p><p><strong>va_start:</strong></p><pre><code>void va_start(va_list list, arg)</code></pre><p>将va_list指向初始参数</p><ul><li>arg为函数的最后一个非不定参数，如：上面的printf函数，该参数就要填fomat。</li></ul><p><strong>va_arg：</strong></p><pre><code>type va_arg(va_list list, type)</code></pre><p>从list中取出参数并指定为type类型返回，同时移动指针指向下一个参数</p><ul><li>注意：一定要确保函数的type类型和返回值相同</li></ul><p><strong>va_end：</strong></p><pre><code>void va_end(va_list list)</code></pre><p>释放list，将其置NULL。</p><h3 id="具体用法"><a href="#具体用法" class="headerlink" title="具体用法"></a>具体用法</h3><pre><code>char **CreateStrings(int nNum, const char *nName,...);//生成一个字符串数组//代码如下：va_list ParamList;va_start(ParamList, nName); // 最后一个非可变参数char **sRet = (char **)malloc(sizeof(char *)*(nNum+1));                 // 创建二级指针if(sRet!=NULL){    // 此处不用纠结，只是填入nName参数到返回的字符串数组中    char *sMenber = NULL;    char *sTmp = NULL;    sMenber = (char *)malloc(sizeof(char)*strlen(nName));               if(strcpy(sMenber, nName)!=NULL)                                // copy string to sMenber        *sRet = sMenber;                                            // add sMenber to sRet    else        return NULL;                                                // test copy    // 此处不用纠结    // 正戏开始    for(i=1; i&lt;=nNum-1; i++)    {        sTmp = va_arg(ParamList,char *);                            // 多次从不定参数表取出参数，转为char *类型        if(sTmp==NULL)            return NULL;        sMenber = (char *)malloc(sizeof(char)*strlen(sTmp));        strcpy(sMenber, sTmp);        *(sRet+i) = sMenber;                                       }    *(sRet+nNum) = NULL;}va_end(ParamList);                                                    // 释放不定参数表</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      函数不定参数的实现
+    
+    </summary>
+    
+    
+      <category term="C Library" scheme="http://yoursite.com/categories/C-Library/"/>
+    
+    
+      <category term="C Std Library" scheme="http://yoursite.com/tags/C-Std-Library/"/>
+    
+      <category term="stdarg.h" scheme="http://yoursite.com/tags/stdarg-h/"/>
+    
+  </entry>
   
   <entry>
     <title>文章常用标志</title>
