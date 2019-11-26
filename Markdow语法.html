@@ -78,7 +78,7 @@
 
 
 
-  <meta name="keywords" content="C Std Library,stdarg.h," />
+  <meta name="keywords" content=",,,,,,,,,,,,," />
 
 
 
@@ -91,15 +91,15 @@
 
 
 
-<meta name="description" content="函数不定参数的实现">
-<meta name="keywords" content="C Std Library,stdarg.h">
-<meta property="og:type" content="article">
-<meta property="og:title" content="stdarg.h实现可变参数">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;24&#x2F;stdarg-h%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0&#x2F;index.html">
+<meta name="description" content="前言：Hello，Is me！现在是北京时间2019年11月25号 11:45，在这里我将简单介绍下Markdown的一些基本语法，注意这不是演习，子弹已经压满！通过阅读本文，你将能够知道 如何更准地打枪               如何写一篇博客！ 标题类：1.用#来表示标题：# 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题    &#x2F;&#x2F; 这个一般都不会用到">
+<meta name="keywords" content="Markdown 简明语法">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Markdow语法">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;Markdow%E8%AF%AD%E6%B3%95.html">
 <meta property="og:site_name" content="Askia&#39;s note">
-<meta property="og:description" content="函数不定参数的实现">
+<meta property="og:description" content="前言：Hello，Is me！现在是北京时间2019年11月25号 11:45，在这里我将简单介绍下Markdown的一些基本语法，注意这不是演习，子弹已经压满！通过阅读本文，你将能够知道 如何更准地打枪               如何写一篇博客！ 标题类：1.用#来表示标题：# 一级标题 ## 二级标题 ### 三级标题 #### 四级标题 ##### 五级标题    &#x2F;&#x2F; 这个一般都不会用到">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-24T15:53:37.259Z">
+<meta property="og:updated_time" content="2019-11-25T17:09:06.429Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -130,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/24/stdarg-h实现不定参数/"/>
+  <link rel="canonical" href="http://yoursite.com/Markdow语法.html"/>
 
 
 
 
 
-  <title>stdarg.h实现可变参数 | Askia's note</title>
+  <title>Markdow语法 | Askia's note</title>
   
 
 
@@ -305,263 +305,87 @@
 
   <div id="posts" class="posts-expand">
     
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/24/stdarg-h%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Askia">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/terse.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Askia's note">
-    </span>
-
     
+    
+    <div class="post-block page">
       <header class="post-header">
 
-        
-        
-          <h1 class="post-title" itemprop="name headline">stdarg.h实现可变参数</h1>
-        
+	<h1 class="post-title" itemprop="name headline">Markdow语法</h1>
 
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-24T23:50:02+08:00">
-                2019-11-24
-              </time>
-            
 
-            
 
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-Library/" itemprop="url" rel="index">
-                    <span itemprop="name">C Library</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-            <span class="post-meta-divider">|</span>
-            <span class="page-pv">文章访问数 <i class="fa fa-file-o"></i>
-            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>人
-            </span>
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  426
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-
-          
-              <div class="post-description">
-                  函数不定参数的实现
-              </div>
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
       
-
       
-        <h2 id="stdarg-h实现可变参数"><a href="#stdarg-h实现可变参数" class="headerlink" title="stdarg.h实现可变参数"></a>stdarg.h实现可变参数</h2><ol>
-<li>本篇谈论用标准库stdarg.h实现不定参数的方方面面（11/24/2019 11:48:35 PM ）</li>
-<li>小技巧：实现格式输入、输出（见更新）</li>
-</ol>
-<h3 id="stdarg-h的介绍"><a href="#stdarg-h的介绍" class="headerlink" title="stdarg.h的介绍"></a>stdarg.h的介绍</h3><p>stdarg.h是C语言中C标准函数库的头文件，stdarg是由<strong>standard（标准） arguments（参数）</strong>简化而来。</p>
-<p>我们常常看到一些函数形如：<strong>printf(const char *fomat,…);</strong><br>这类型的函数就可以用该标准头文件实现。</p>
-<h3 id="包含成员"><a href="#包含成员" class="headerlink" title="包含成员"></a>包含成员</h3><p><strong>va_list:</strong> </p>
-<p>用来保存<strong>va_start()</strong>、<strong>va_arg()</strong> 和 <strong>va_end()</strong> 这三个宏存储信息的类型。</p>
-<p><strong>va_start:</strong></p>
-<pre><code>void va_start(va_list list, arg)</code></pre><p>将va_list指向初始参数</p>
+      <div class="post-body">
+        
+        
+          <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>Hello，Is me！现在是<strong>北京时间2019年11月25号 11:45</strong>，在这里我将简单介绍下Markdown的一些基本语法，<del>注意这不是演习，子弹已经压满！</del>通过阅读本文，你将能够知道 <del>如何更准地打枪</del>               如何写一篇博客！</p>
+<h2 id="标题类："><a href="#标题类：" class="headerlink" title="标题类："></a>标题类：</h2><h3 id="1-用-来表示标题："><a href="#1-用-来表示标题：" class="headerlink" title="1.用#来表示标题："></a>1.用#来表示标题：</h3><pre><code># 一级标题
+## 二级标题
+### 三级标题
+#### 四级标题
+##### 五级标题    // 这个一般都不会用到哦！
+###### 六级标题    // 什么！你可能会用到这个？emm,我不听(」＞＜)」</code></pre><p>效果如下：</p>
+<hr>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
 <ul>
-<li>arg为函数的最后一个非不定参数，如：上面的printf函数，该参数就要填fomat。</li>
-</ul>
-<p><strong>va_arg：</strong></p>
-<pre><code>type va_arg(va_list list, type)</code></pre><p>从list中取出参数并指定为type类型返回，同时移动指针指向下一个参数</p>
+<li><p><strong>Q：</strong>为什么二级标题下面会有条下划线？</p>
+</li>
+<li><p><strong>A：</strong>咳咳，关于这个，其实用的环境有关联，Askia用的是MarkdownPad2，创建二级标题是会自动加下划线的（(<del>完全瞎掰的，其实我也不知道为什么会这样！！！</del>）<br><br><br></p>
+</li>
+<li><p><strong>Q：</strong>那我不想要下划线要咋整啊？</p>
+</li>
+<li><p><strong>A：</strong><del>原则上整不了</del> 需要在文件中添加CSS：<br>  `    <style><br>  h2 {</p>
+<pre><code>border-bottom: none</code></pre><p>  }<br>  </style>`<br><br>来去除下划线!<br><br><br></p>
+</li>
+<li><p><strong>Q：</strong>为什么我按照上面的格式写出来的显示内容是：<br>#一级标题<br>## 二级标题<br>### 三级标题<br>……</p>
+</li>
+<li><p><strong>A：</strong>(<del>因为你忘记空格#和文字之间的空格啊</del> (<em>ﾉ｀皿´</em>)ﾉ ┉┴┉┴┉)<br>咳咳，你这样写是没错的，<del>可能</del> 绝对是编辑器的问题，只要在#和标题中间加那么一个空格就行，不用多，一个足矣。</p>
+<h3 id="2-用-和-表示标题："><a href="#2-用-和-表示标题：" class="headerlink" title="2.用=和-表示标题："></a>2.用=和-表示标题：</h3><p>这是目前Askia比较喜欢用的标记方法，<strong>当然强烈建议用第一种！</strong></p>
+<p>  标题1<br>  =            // 打多少个都行！反正=代表一级标题<br>  标题2</p>
 <ul>
-<li>注意：一定要确保函数的type类型和返回值相同</li>
+<li>// 打多少个都行！反正-代表二级标题<br>效果：<h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1>标题2</li>
 </ul>
-<p><strong>va_end：</strong></p>
-<pre><code>void va_end(va_list list)</code></pre><p>释放list，将其置NULL。</p>
-<h3 id="具体用法"><a href="#具体用法" class="headerlink" title="具体用法"></a>具体用法</h3><pre><code>char **CreateStrings(int nNum, const char *nName,...);
-//生成一个字符串数组
+</li>
+<li></li>
+</ul>
+<h2 id="分割线类："><a href="#分割线类：" class="headerlink" title="分割线类："></a>分割线类：</h2><p><strong>连用三个星号、减号或者下划线即可实现分割线</strong></p>
+<pre><code>___     // 分割线1
+***        // 分割线2
+---        // 分割线3</code></pre><p>效果：</p>
+<hr>
+<hr>
+<hr>
+<ul>
+<li><strong>Q：</strong>那我想要以文本的形式输出三个下划线或者减号怎么整?</li>
+<li><strong>A：</strong>用<strong>反转义符号\（反斜杠）</strong>呀！<br><br><br></li>
+<li><strong>Q：</strong>..XXXXX#%%@$$#$@..?</li>
+<li><strong>A：</strong>..%##$@@$$%%%#$$..！<br>
+还有什么问题（<del>心虚</del>）？没有，好下一个！
+## 字体类:
 
-//代码如下：
-va_list ParamList;
-va_start(ParamList, nName); // 最后一个非可变参数
 
-char **sRet = (char **)malloc(sizeof(char *)*(nNum+1));                 // 创建二级指针
-if(sRet!=NULL)
-{
-    // 此处不用纠结，只是填入nName参数到返回的字符串数组中
-    char *sMenber = NULL;
-    char *sTmp = NULL;
-    sMenber = (char *)malloc(sizeof(char)*strlen(nName));           
-    if(strcpy(sMenber, nName)!=NULL)                                // copy string to sMenber
-        *sRet = sMenber;                                            // add sMenber to sRet
-    else
-        return NULL;                                                // test copy
-    // 此处不用纠结
 
-    // 正戏开始
-    for(i=1; i&lt;=nNum-1; i++)
-    {
-        sTmp = va_arg(ParamList,char *);                            // 多次从不定参数表取出参数，转为char *类型
-        if(sTmp==NULL)
-            return NULL;
-        sMenber = (char *)malloc(sizeof(char)*strlen(sTmp));
-        strcpy(sMenber, sTmp);
-        *(sRet+i) = sMenber;                                   
-    }
-    *(sRet+nNum) = NULL;
-}
-va_end(ParamList);                                                    // 释放不定参数表</code></pre>
+
+
+
+
+
+</li>
+</ul>
+
+        
+      </div>
+      
+      
       
     </div>
     
     
     
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/C-Std-Library/" rel="tag"># C Std Library</a>
-          
-            <a href="/tags/stdarg-h/" rel="tag"># stdarg.h</a>
-          
-        </div>
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2019/11/20/%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E6%A0%87%E5%BF%97/" rel="next" title="文章常用标志">
-                <i class="fa fa-chevron-left"></i> 文章常用标志
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/26/C%E8%AF%AD%E8%A8%80%E9%9A%90%E8%97%8F%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/" rel="prev" title="C语言隐藏结构体的实现方法">
-                C语言隐藏结构体的实现方法 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
@@ -685,7 +509,7 @@ va_end(ParamList);                                                    // 释放�
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#stdarg-h实现可变参数"><span class="nav-number">1.</span> <span class="nav-text">stdarg.h实现可变参数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#stdarg-h的介绍"><span class="nav-number">1.1.</span> <span class="nav-text">stdarg.h的介绍</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#包含成员"><span class="nav-number">1.2.</span> <span class="nav-text">包含成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#具体用法"><span class="nav-number">1.3.</span> <span class="nav-text">具体用法</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题类："><span class="nav-number">1.1.</span> <span class="nav-text">标题类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-用-来表示标题："><span class="nav-number">1.1.1.</span> <span class="nav-text">1.用#来表示标题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-用-和-表示标题："><span class="nav-number">2.1.2.</span> <span class="nav-text">2.用=和-表示标题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标题1"><span class="nav-number">3.</span> <span class="nav-text">标题1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分割线类："><span class="nav-number">3.1.</span> <span class="nav-text">分割线类：</span></a></li></ol></li></ol></div>
             
 
           </div>
