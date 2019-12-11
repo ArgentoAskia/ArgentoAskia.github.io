@@ -328,53 +328,36 @@
 ### 三级标题
 #### 四级标题
 ##### 五级标题    // 这个一般都不会用到哦！
-###### 六级标题    // 什么！你可能会用到这个？emm,我不听(」＞＜)」</code></pre><p>效果如下：</p>
+###### 六级标题    // 什么！你可能会用到这个？emm,我不听(」＞＜)」
+</code></pre><p>效果如下：</p>
 <hr>
 <h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><hr>
 <ul>
-<li><p><strong>Q：</strong>为什么二级标题下面会有条下划线？</p>
-</li>
-<li><p><strong>A：</strong>咳咳，关于这个，其实用的环境有关联，Askia用的是MarkdownPad2，创建二级标题是会自动加下划线的（(<del>完全瞎掰的，其实我也不知道为什么会这样！！！</del>）<br><br><br></p>
-</li>
-<li><p><strong>Q：</strong>那我不想要下划线要咋整啊？</p>
-</li>
-<li><p><strong>A：</strong><del>原则上整不了</del> 需要在文件中添加CSS：<br>  `    <style><br>  h2 {</p>
-<pre><code>border-bottom: none</code></pre><p>  }<br>  </style>`<br><br>来去除下划线!<br><br><br></p>
-</li>
-<li><p><strong>Q：</strong>为什么我按照上面的格式写出来的显示内容是：<br>#一级标题<br>## 二级标题<br>### 三级标题<br>……</p>
-</li>
+<li><strong>Q：</strong>为什么二级标题下面会有条下划线？</li>
+<li><strong>A：</strong>咳咳，关于这个，其实用的环境有关联，Askia用的是MarkdownPad2，创建二级标题是会自动加下划线的（(<del>完全瞎掰的，其实我也不知道为什么会这样！！！</del>）<br><br><br></li>
+<li><strong>Q：</strong>那我不想要下划线要咋整啊？</li>
+<li><strong>A：</strong><del>原则上整不了</del> 需要在文件中添加CSS：<br>  `    <style><br>  h2 {<pre><code>      border-bottom: none
+</code></pre>  }<br>  &lt;/style&gt;`<br><br>来去除下划线!<br><br><br></li>
+<li><strong>Q：</strong>为什么我按照上面的格式写出来的显示内容是：<br>#一级标题<br>## 二级标题<br>### 三级标题<br>……</li>
 <li><p><strong>A：</strong>(<del>因为你忘记空格#和文字之间的空格啊</del> (<em>ﾉ｀皿´</em>)ﾉ ┉┴┉┴┉)<br>咳咳，你这样写是没错的，<del>可能</del> 绝对是编辑器的问题，只要在#和标题中间加那么一个空格就行，不用多，一个足矣。</p>
 <h3 id="2-用-和-表示标题："><a href="#2-用-和-表示标题：" class="headerlink" title="2.用=和-表示标题："></a>2.用=和-表示标题：</h3><p>这是目前Askia比较喜欢用的标记方法，<strong>当然强烈建议用第一种！</strong></p>
 <p>  标题1<br>  =            // 打多少个都行！反正=代表一级标题<br>  标题2</p>
 <ul>
-<li>// 打多少个都行！反正-代表二级标题<br>效果：<h1 id="标题1"><a href="#标题1" class="headerlink" title="标题1"></a>标题1</h1>标题2</li>
+<li>// 打多少个都行！反正-代表二级标题<br>效果：<br>标题1<br>=<br>标题2<br>-</li>
 </ul>
 </li>
-<li></li>
 </ul>
 <h2 id="分割线类："><a href="#分割线类：" class="headerlink" title="分割线类："></a>分割线类：</h2><p><strong>连用三个星号、减号或者下划线即可实现分割线</strong></p>
 <pre><code>___     // 分割线1
 ***        // 分割线2
----        // 分割线3</code></pre><p>效果：</p>
+---        // 分割线3
+</code></pre><p>效果：</p>
 <hr>
-<hr>
-<hr>
-<ul>
+<h2 id=""><a href="#" class="headerlink" title="*    "></a><em>*</em>    </h2><ul>
 <li><strong>Q：</strong>那我想要以文本的形式输出三个下划线或者减号怎么整?</li>
-<li><strong>A：</strong>用<strong>反转义符号\（反斜杠）</strong>呀！<br><br><br></li>
+<li><strong>A：</strong>用<strong>反转义符号\\（反斜杠）</strong>呀！<br><br><br></li>
 <li><strong>Q：</strong>..XXXXX#%%@$$#$@..?</li>
-<li><strong>A：</strong>..%##$@@$$%%%#$$..！<br>
-还有什么问题（<del>心虚</del>）？没有，好下一个！
-## 字体类:
-
-
-
-
-
-
-
-
-</li>
+<li><strong>A：</strong>..%##$@@<script type="math/tex">%%%#</script>..！<br><br><br>还有什么问题（<del>心虚</del>）？没有，好下一个！<h2 id="字体类"><a href="#字体类" class="headerlink" title="字体类:"></a>字体类:</h2></li>
 </ul>
 
         
@@ -447,7 +430,7 @@
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -458,7 +441,7 @@
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -469,7 +452,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -509,7 +492,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题类："><span class="nav-number">1.1.</span> <span class="nav-text">标题类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-用-来表示标题："><span class="nav-number">1.1.1.</span> <span class="nav-text">1.用#来表示标题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-用-和-表示标题："><span class="nav-number">2.1.2.</span> <span class="nav-text">2.用=和-表示标题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#标题1"><span class="nav-number">3.</span> <span class="nav-text">标题1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#分割线类："><span class="nav-number">3.1.</span> <span class="nav-text">分割线类：</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#标题类："><span class="nav-number">1.1.</span> <span class="nav-text">标题类：</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-用-来表示标题："><span class="nav-number">1.1.1.</span> <span class="nav-text">1.用#来表示标题：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#一级标题"><span class="nav-number">2.</span> <span class="nav-text">一级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#二级标题"><span class="nav-number">2.1.</span> <span class="nav-text">二级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#三级标题"><span class="nav-number">2.1.1.</span> <span class="nav-text">三级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#四级标题"><span class="nav-number">2.1.1.1.</span> <span class="nav-text">四级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#五级标题"><span class="nav-number">2.1.1.1.1.</span> <span class="nav-text">五级标题</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#六级标题"><span class="nav-number">2.1.1.1.1.1.</span> <span class="nav-text">六级标题</span></a></li></ol></li></ol></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -544,7 +527,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.8k</span>
+    <span title="Site words total count">3.5k</span>
   
 -->
 
@@ -566,7 +549,7 @@
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.8k字</span>
+  <span class="post-count">博客全站共3.5k字</span>
 </div>
 
         
@@ -1097,6 +1080,8 @@ color="0,0,255" opacity='0.9' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
   
 
   
+  
+
 
   
 

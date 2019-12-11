@@ -455,17 +455,20 @@
 <h3 id="包含成员"><a href="#包含成员" class="headerlink" title="包含成员"></a>包含成员</h3><p><strong>va_list:</strong> </p>
 <p>用来保存<strong>va_start()</strong>、<strong>va_arg()</strong> 和 <strong>va_end()</strong> 这三个宏存储信息的类型。</p>
 <p><strong>va_start:</strong></p>
-<pre><code>void va_start(va_list list, arg)</code></pre><p>将va_list指向初始参数</p>
+<pre><code> void va_start(va_list list, arg)
+</code></pre><p>将va_list指向初始参数</p>
 <ul>
 <li>arg为函数的最后一个非不定参数，如：上面的printf函数，该参数就要填fomat。</li>
 </ul>
 <p><strong>va_arg：</strong></p>
-<pre><code>type va_arg(va_list list, type)</code></pre><p>从list中取出参数并指定为type类型返回，同时移动指针指向下一个参数</p>
+<pre><code>type va_arg(va_list list, type)
+</code></pre><p>从list中取出参数并指定为type类型返回，同时移动指针指向下一个参数</p>
 <ul>
 <li>注意：一定要确保函数的type类型和返回值相同</li>
 </ul>
 <p><strong>va_end：</strong></p>
-<pre><code>void va_end(va_list list)</code></pre><p>释放list，将其置NULL。</p>
+<pre><code>void va_end(va_list list)
+</code></pre><p>释放list，将其置NULL。</p>
 <h3 id="具体用法"><a href="#具体用法" class="headerlink" title="具体用法"></a>具体用法</h3><pre><code>char **CreateStrings(int nNum, const char *nName,...);
 //生成一个字符串数组
 
@@ -498,7 +501,8 @@ if(sRet!=NULL)
     }
     *(sRet+nNum) = NULL;
 }
-va_end(ParamList);                                                    // 释放不定参数表</code></pre>
+va_end(ParamList);                                                    // 释放不定参数表
+</code></pre>
       
     </div>
     
@@ -623,7 +627,7 @@ va_end(ParamList);                                                    // 释放�
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -634,7 +638,7 @@ va_end(ParamList);                                                    // 释放�
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -645,7 +649,7 @@ va_end(ParamList);                                                    // 释放�
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -720,7 +724,7 @@ va_end(ParamList);                                                    // 释放�
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.8k</span>
+    <span title="Site words total count">3.5k</span>
   
 -->
 
@@ -742,7 +746,7 @@ va_end(ParamList);                                                    // 释放�
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.8k字</span>
+  <span class="post-count">博客全站共3.5k字</span>
 </div>
 
         
@@ -1273,6 +1277,8 @@ color="0,0,255" opacity='0.9' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
   
 
   
+  
+
 
   
 

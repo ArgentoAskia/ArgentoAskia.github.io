@@ -465,7 +465,8 @@ PBOOK CreateBook(int price, char *name)
 void FreeBook(PBOOK book)
 {
     free(book);
-} </code></pre><p>上述源代码文件定义了一个结构和两个函数，同时包含一个自身的头文件</p>
+} 
+</code></pre><p>上述源代码文件定义了一个结构和两个函数，同时包含一个自身的头文件</p>
 <p><code>book.h</code></p>
 <pre><code>#include &lt;malloc.h&gt;
 #define PBOOK BOOK *
@@ -474,7 +475,8 @@ struct book;
 typedef struct book BOOK;
 
 PBOOK CreateBook(int price, char *name);
-void FreeBook(PBOOK book);</code></pre><p>头文件中声明了两个函数和结构体，其中用typedef给结构体定义为一种类型。因为源代码文件会包含这个头文件，<strong>所以在源代码中也可以使用头文件中的宏</strong></p>
+void FreeBook(PBOOK book);
+</code></pre><p>头文件中声明了两个函数和结构体，其中用typedef给结构体定义为一种类型。因为源代码文件会包含这个头文件，<strong>所以在源代码中也可以使用头文件中的宏</strong></p>
 <p><code>main.cpp</code></p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &quot;book.h&quot;
@@ -482,9 +484,12 @@ int main()
 {
     PBOOK a = CreateBook(20, &quot;1231321231&quot;);    // 定义的变量必须是指针类型 
     printf(&quot;%d&quot;,a);
- } </code></pre><p>注意定义的BOOK类型 <strong>必须是指针（BOOK *类型，参照头文件的宏定义）</strong> 一旦定义为</p>
-<pre><code>BOOK a；</code></pre><p>就会报错，因为我们包含的头文件只有BOOK的声明，定义为BOOK a的话编译器不知道要给a分配多少内存空间，会引发以下类似类型错误：</p>
-<pre><code>[Error] variable &apos;BOOK a&apos; has initializer but incomplete type</code></pre><p>编译通过之后，可以用printf函数打印分配的地址，看下是否分配成功！<br>这样定义的变量的所有对成员的操作都要写到源代码文件中（包括基本的输入输出函数都要），因为在主函数中，这些变量的成员的值无法被直接更改！<br>如：</p>
+ } 
+</code></pre><p>注意定义的BOOK类型 <strong>必须是指针（BOOK *类型，参照头文件的宏定义）</strong> 一旦定义为</p>
+<pre><code>BOOK a；
+</code></pre><p>就会报错，因为我们包含的头文件只有BOOK的声明，定义为BOOK a的话编译器不知道要给a分配多少内存空间，会引发以下类似类型错误：</p>
+<pre><code>[Error] variable &#39;BOOK a&#39; has initializer but incomplete type
+</code></pre><p>编译通过之后，可以用printf函数打印分配的地址，看下是否分配成功！<br>这样定义的变量的所有对成员的操作都要写到源代码文件中（包括基本的输入输出函数都要），因为在主函数中，这些变量的成员的值无法被直接更改！<br>如：</p>
 <p><code>main.cpp</code></p>
 <pre><code>#include &lt;stdio.h&gt;
 #include &quot;book.h&quot;
@@ -492,8 +497,10 @@ int main()
 {
     PBOOK a = CreateBook(20, &quot;1231321231&quot;);    // 定义的变量必须是指针类型 
     printf(&quot;%d %d&quot;,a, a-&gt;price);
- } </code></pre><p>编译器会报类型错误，</p>
-<pre><code>[Error] invalid use of incomplete type &apos;BOOK {aka struct book}&apos;</code></pre>
+ } 
+</code></pre><p>编译器会报类型错误，</p>
+<pre><code>[Error] invalid use of incomplete type &#39;BOOK {aka struct book}&#39;
+</code></pre>
       
     </div>
     
@@ -618,7 +625,7 @@ int main()
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">6</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -629,7 +636,7 @@ int main()
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -640,7 +647,7 @@ int main()
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -715,7 +722,7 @@ int main()
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">1.8k</span>
+    <span title="Site words total count">3.5k</span>
   
 -->
 
@@ -737,7 +744,7 @@ int main()
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共1.8k字</span>
+  <span class="post-count">博客全站共3.5k字</span>
 </div>
 
         
@@ -1268,6 +1275,8 @@ color="0,0,255" opacity='0.9' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
   
 
   
+  
+
 
   
 
