@@ -117,7 +117,7 @@
     <link href="http://yoursite.com/2019/11/20/%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E6%A0%87%E5%BF%97/"/>
     <id>http://yoursite.com/2019/11/20/%E6%96%87%E7%AB%A0%E5%B8%B8%E7%94%A8%E6%A0%87%E5%BF%97/</id>
     <published>2019-11-20T09:49:31.000Z</published>
-    <updated>2019-11-20T10:17:17.178Z</updated>
+    <updated>2019-12-11T12:26:41.741Z</updated>
     
     <content type="html"><![CDATA[<h1 id="常用标识："><a href="#常用标识：" class="headerlink" title="常用标识："></a>常用标识：</h1><h2 id="title"><a href="#title" class="headerlink" title="title:"></a>title:</h2><p>文章标题</p><h2 id="tags"><a href="#tags" class="headerlink" title="tags:"></a>tags:</h2><p>文章标签，格式可为：<code>[XXXX,XXXX,...]</code> 或者 <code>- XXXXX\n - XXXXXX\n</code></p><h2 id="date"><a href="#date" class="headerlink" title="date:"></a>date:</h2><p>生成日期<br>格式自定义</p><h2 id="categories"><a href="#categories" class="headerlink" title="categories:"></a>categories:</h2><p>文章分类</p><h2 id="description"><a href="#description" class="headerlink" title="description:"></a>description:</h2><p>文章描述，展示在主页的描述。 </p><h2 id="image"><a href="#image" class="headerlink" title="image:"></a>image:</h2><p>待写</p><h2 id="password"><a href="#password" class="headerlink" title="password:"></a>password:</h2><p>如果需要给md加密码访问，可加上这个。</p><h2 id="top"><a href="#top" class="headerlink" title="top:"></a>top:</h2><p>博文置顶优先级，数值越高越靠前。</p>]]></content>
     
