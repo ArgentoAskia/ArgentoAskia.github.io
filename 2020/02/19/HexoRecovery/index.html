@@ -78,7 +78,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="ReBuild Hexo blog," />
 
 
 
@@ -91,14 +91,15 @@
 
 
 
-<meta name="description" content="现在是北京时间：                                 您的浏览器太古董了，升级吧！                               var clock = document.getElementById(&quot;clock&quot;);             var cxt = clock.getContext(&quot;2d&quot;);">
-<meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;schedule&#x2F;index.html">
+<meta name="description" content="ReCovery hexo after reinstall system">
+<meta name="keywords" content="ReBuild Hexo blog">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HexoRecovery">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;02&#x2F;19&#x2F;HexoRecovery&#x2F;index.html">
 <meta property="og:site_name" content="Askia&#39;s note">
-<meta property="og:description" content="现在是北京时间：                                 您的浏览器太古董了，升级吧！                               var clock = document.getElementById(&quot;clock&quot;);             var cxt = clock.getContext(&quot;2d&quot;);">
+<meta property="og:description" content="ReCovery hexo after reinstall system">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-11T13:10:26.510Z">
+<meta property="og:updated_time" content="2020-02-19T05:52:11.526Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -129,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/schedule/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/02/19/HexoRecovery/"/>
 
 
 
 
 
-  <title>schedule | Askia's note</title>
+  <title>HexoRecovery | Askia's note</title>
   
 
 
@@ -304,267 +305,230 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/02/19/HexoRecovery/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Askia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/terse.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Askia's note">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline">schedule</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <html>
-    <head>
-        <title>现在是北京时间：</title>
-    <link rel="alternate" href="/atom.xml" title="Askia's note" type="application/atom+xml">
-</head>
-    <body>
-        <canvas id = "clock" width = "600px" height = "200px">
-            您的浏览器太古董了，升级吧！
-        </canvas>
-        <script type = "text/javascript">
-            var clock = document.getElementById("clock");
-            var cxt = clock.getContext("2d");
-
-            //显示数字时钟
-            function showTime(m, n) {
-                cxt.clearRect(0, 0, 500, 500);
-
-                var now = new Date;
-                var hour = now.getHours();
-                var min = now.getMinutes();
-                var sec = now.getSeconds();
-                var msec = now.getMilliseconds();
-                hour = hour >= 10 ? hour : "0" + hour;
-                min = min >= 10 ? min : "0" + min;
-                sec = sec >= 10 ? sec : "0" + sec;
-                msec = (msec >= 10 && msec < 100) ? ("0" + msec) : (msec >= 0 && msec < 10) ? ("00" + msec) : msec;
-
-                bdigital(m, n, hour);
-                bdigital(m + 160, n, min);
-                bdigital(m + 320, n, sec);
-                //tdigital(m + 480, n, msec);
-
-                //三位数的显示
-                function tdigital(x, y, num) {
-                    var ge = num % 10;
-                    var shi = (parseInt(num / 10)) % 10;
-                    var bai = parseInt((parseInt(num / 10)) / 10) % 10;
-                    digital(x, y, bai);
-                    digital(x + 70, y, shi);
-                    digital(x + 140, y, ge);
-                }
-
-                //两位数的显示
-                function bdigital(x, y, num) {
-                    var ge = num % 10;
-                    var shi = (parseInt(num / 10)) % 10;
-                    digital(x, y, shi);
-                    digital(x + 70, y, ge);
-                }
-
-                //画：
-                //小时与分钟之间
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 140, n + 80, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 140, n + 100, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                //分钟与秒之间
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 300, n + 80, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 300, n + 100, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                //秒与毫秒之间一个.
-//                cxt.lineWidth = 5;
-//                cxt.strokeStyle = "#000";
-//                cxt.fillStyle = "#000";
-//                cxt.beginPath();
-//                cxt.arc(m + 460, n + 100, 3, 0, 360, false);
-//                cxt.fill();
-//                cxt.closePath();
-//                cxt.stroke();
-            }
-
-            //显示一位数字
-            function digital(x, y, num) {
-                //设置风格
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-
-                //a
-                function a() {
-                    cxt.beginPath();
-                    cxt.moveTo(x, y);
-                    cxt.lineTo(x + 50, y);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //b
-                function b() {
-                    cxt.beginPath();
-                    cxt.moveTo(x + 55, y + 5);
-                    cxt.lineTo(x + 55, y + 55);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //c
-                function c() {
-                    cxt.beginPath();
-                    cxt.moveTo(x + 55, y + 60);
-                    cxt.lineTo(x + 55, y + 110);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //d
-                function d() {
-                    cxt.beginPath();
-                    cxt.moveTo(x + 50, y + 115);
-                    cxt.lineTo(x, y + 115);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //e
-                function e() {
-                    cxt.beginPath();
-                    cxt.moveTo(x - 5, y + 110);
-                    cxt.lineTo(x - 5, y + 60);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //f
-                function f() {
-                    cxt.beginPath();
-                    cxt.moveTo(x - 5, y + 55);
-                    cxt.lineTo(x - 5, y + 5);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //g
-                function g() {
-                    cxt.beginPath();
-                    cxt.moveTo(x, y + 57.5);
-                    cxt.lineTo(x + 50, y + 57.5);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //0
-                function zero() {
-                    a(); b(); c(); d(); e(); f();
-                }
-                //1
-                function one() {
-                    b(); c();
-                }
-                //2
-                function two() {
-                    a(); b(); d(); e(); g();
-                }
-                //3
-                function three() {
-                    a(); b(); c(); d(); g();
-                }
-                //4
-                function four() {
-                    b(); c(); f(); g();
-                }
-                //5
-                function five() {
-                    a(); c(); d(); f(); g();
-                }
-                //6
-                function six() {
-                    a(); c(); d(); e(); f(); g();
-                }
-                //7
-                function seven() {
-                    a(); b(); c();
-                }
-                //8
-                function eight() {
-                    a(); b(); c(); d(); e(); f(); g();
-                }
-                //9
-                function nine() {
-                    a(); b(); c(); d(); f(); g();
-                }
-
-                //数字n
-                function number(n) {
-                    switch (n) {
-                        case 0: zero(); break;
-                        case 1: one(); break;
-                        case 2: two(); break;
-                        case 3: three(); break;
-                        case 4: four(); break;
-                        case 5: five(); break;
-                        case 6: six(); break;
-                        case 7: seven(); break;
-                        case 8: eight(); break;
-                        case 9: nine(); break;
-                    }
-                }
-                number(num);
-            }
-
-            showTime(1, 45);
-            setInterval("showTime(10,45)", 1000);
-        </script>
-    </body>
-</html>
-
-
+          <h1 class="post-title" itemprop="name headline">HexoRecovery</h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-02-19T13:48:19+08:00">
+                2020-02-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Hexo/" itemprop="url" rel="index">
+                    <span itemprop="name">Hexo</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">文章访问数 <i class="fa fa-file-o"></i>
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>人
+            </span>
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  308
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  1
+                </span>
+              
+            </div>
+          
+
+          
+              <div class="post-description">
+                  ReCovery hexo after reinstall system
+              </div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <h2 id="1-前言"><a href="#1-前言" class="headerlink" title="1.前言"></a>1.前言</h2><p>写下这篇博客，主要用于记录自己搭建博客过程，以后重装系统后有一个参考的恢复方向（已经干掉重新来了好几次，每次都要找资料，猝）</p>
+<h2 id="2-安装Node-js-nmp"><a href="#2-安装Node-js-nmp" class="headerlink" title="2.安装Node.js(nmp)"></a>2.安装Node.js(nmp)</h2><p>查看版本：</p>
+<pre><code>node -v
+npm -v
+</code></pre><p>因为国内的比较慢，所以安装淘宝源：</p>
+<pre><code>npm install -g cnpm --registry=http://registry.npm.taobao.org
+</code></pre><p>若发现淘宝源下载过程中出现卡死，则最好换回原服务器：</p>
+<pre><code>npm config delete registry
+</code></pre><h2 id="3-安装hexo"><a href="#3-安装hexo" class="headerlink" title="3.安装hexo"></a>3.安装hexo</h2><pre><code>`cnpm install -g hexo-cli`
+</code></pre><p>自动下载hexo</p>
+<h2 id="4-初始化hexo"><a href="#4-初始化hexo" class="headerlink" title="4.初始化hexo"></a>4.初始化hexo</h2><p>新建一个目录，在目录里边用Git bash或者Powershell，初始化hexo</p>
+<pre><code>hexo init
+</code></pre><h2 id="5-部署博客到github上"><a href="#5-部署博客到github上" class="headerlink" title="5.部署博客到github上"></a>5.部署博客到github上</h2><p>先新建github仓室：名字必须是用户名+github.io<br>然后回到git bash或者powershell<br>安装hexo deployer</p>
+<pre><code>npm install --save hexo-deployer-git
+</code></pre><h2 id="6-设置-comfig-yml"><a href="#6-设置-comfig-yml" class="headerlink" title="6.设置_comfig.yml"></a>6.设置_comfig.yml</h2><p>在deployment那里，</p>
+<pre><code>type: git
+repo: 仓室地址
+branch: master
+</code></pre><p>注意中间的空格，windows的type那里会有个单引号，8删了，git写在单引号里（都是泪啊）</p>
+<h2 id="7-填写github账号"><a href="#7-填写github账号" class="headerlink" title="7.填写github账号"></a>7.填写github账号</h2><p>先填写你的账号密码</p>
+<pre><code> git config --global user.email &quot;you@example.com&quot;
+  git config --global user.name &quot;Your Name&quot;
+</code></pre><p>然后：</p>
+<pre><code>hexo d
+</code></pre><p>弹出对话框登录github账户，到此部属完成</p>
+
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/ReBuild-Hexo-blog/" rel="tag"># ReBuild Hexo blog</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/02/03/hello-world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -597,8 +561,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -669,6 +642,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-前言"><span class="nav-number">1.</span> <span class="nav-text">1.前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-安装Node-js-nmp"><span class="nav-number">2.</span> <span class="nav-text">2.安装Node.js(nmp)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-安装hexo"><span class="nav-number">3.</span> <span class="nav-text">3.安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-初始化hexo"><span class="nav-number">4.</span> <span class="nav-text">4.初始化hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-部署博客到github上"><span class="nav-number">5.</span> <span class="nav-text">5.部署博客到github上</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-设置-comfig-yml"><span class="nav-number">6.</span> <span class="nav-text">6.设置_comfig.yml</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-填写github账号"><span class="nav-number">7.</span> <span class="nav-text">7.填写github账号</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       

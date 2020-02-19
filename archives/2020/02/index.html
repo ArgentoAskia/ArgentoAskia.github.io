@@ -91,14 +91,11 @@
 
 
 
-<meta name="description" content="现在是北京时间：                                 您的浏览器太古董了，升级吧！                               var clock = document.getElementById(&quot;clock&quot;);             var cxt = clock.getContext(&quot;2d&quot;);">
 <meta property="og:type" content="website">
-<meta property="og:title" content="schedule">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;schedule&#x2F;index.html">
+<meta property="og:title" content="Askia&#39;s note">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;archives&#x2F;2020&#x2F;02&#x2F;index.html">
 <meta property="og:site_name" content="Askia&#39;s note">
-<meta property="og:description" content="现在是北京时间：                                 您的浏览器太古董了，升级吧！                               var clock = document.getElementById(&quot;clock&quot;);             var cxt = clock.getContext(&quot;2d&quot;);">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-11T13:10:26.510Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -129,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/schedule/"/>
+  <link rel="canonical" href="http://yoursite.com/archives/2020/02/"/>
 
 
 
 
 
-  <title>schedule | Askia's note</title>
+  <title>Archive | Askia's note</title>
   
 
 
@@ -154,7 +151,7 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail">
+  <div class="container sidebar-position-left page-archive">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -302,270 +299,111 @@
           <div id="content" class="content">
             
 
-  <div id="posts" class="posts-expand">
-    
-    
-    
-    <div class="post-block page">
-      <header class="post-header">
+  
+  
+  
+  <div class="post-block archive">
+    <div id="posts" class="posts-collapse">
+      <span class="archive-move-on"></span>
 
-	<h1 class="post-title" itemprop="name headline">schedule</h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
+      <span class="archive-page-counter">
         
         
-          <html>
-    <head>
-        <title>现在是北京时间：</title>
-    <link rel="alternate" href="/atom.xml" title="Askia's note" type="application/atom+xml">
-</head>
-    <body>
-        <canvas id = "clock" width = "600px" height = "200px">
-            您的浏览器太古董了，升级吧！
-        </canvas>
-        <script type = "text/javascript">
-            var clock = document.getElementById("clock");
-            var cxt = clock.getContext("2d");
+        
+          
+        
+        Um..! 8 posts in total. Keep on posting.
+      </span>
 
-            //显示数字时钟
-            function showTime(m, n) {
-                cxt.clearRect(0, 0, 500, 500);
-
-                var now = new Date;
-                var hour = now.getHours();
-                var min = now.getMinutes();
-                var sec = now.getSeconds();
-                var msec = now.getMilliseconds();
-                hour = hour >= 10 ? hour : "0" + hour;
-                min = min >= 10 ? min : "0" + min;
-                sec = sec >= 10 ? sec : "0" + sec;
-                msec = (msec >= 10 && msec < 100) ? ("0" + msec) : (msec >= 0 && msec < 10) ? ("00" + msec) : msec;
-
-                bdigital(m, n, hour);
-                bdigital(m + 160, n, min);
-                bdigital(m + 320, n, sec);
-                //tdigital(m + 480, n, msec);
-
-                //三位数的显示
-                function tdigital(x, y, num) {
-                    var ge = num % 10;
-                    var shi = (parseInt(num / 10)) % 10;
-                    var bai = parseInt((parseInt(num / 10)) / 10) % 10;
-                    digital(x, y, bai);
-                    digital(x + 70, y, shi);
-                    digital(x + 140, y, ge);
-                }
-
-                //两位数的显示
-                function bdigital(x, y, num) {
-                    var ge = num % 10;
-                    var shi = (parseInt(num / 10)) % 10;
-                    digital(x, y, shi);
-                    digital(x + 70, y, ge);
-                }
-
-                //画：
-                //小时与分钟之间
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 140, n + 80, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 140, n + 100, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                //分钟与秒之间
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 300, n + 80, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-                cxt.fillStyle = "#000";
-                cxt.beginPath();
-                cxt.arc(m + 300, n + 100, 3, 0, 360, false);
-                cxt.fill();
-                cxt.closePath();
-                cxt.stroke();
-
-                //秒与毫秒之间一个.
-//                cxt.lineWidth = 5;
-//                cxt.strokeStyle = "#000";
-//                cxt.fillStyle = "#000";
-//                cxt.beginPath();
-//                cxt.arc(m + 460, n + 100, 3, 0, 360, false);
-//                cxt.fill();
-//                cxt.closePath();
-//                cxt.stroke();
-            }
-
-            //显示一位数字
-            function digital(x, y, num) {
-                //设置风格
-                cxt.lineWidth = 5;
-                cxt.strokeStyle = "#000";
-
-                //a
-                function a() {
-                    cxt.beginPath();
-                    cxt.moveTo(x, y);
-                    cxt.lineTo(x + 50, y);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //b
-                function b() {
-                    cxt.beginPath();
-                    cxt.moveTo(x + 55, y + 5);
-                    cxt.lineTo(x + 55, y + 55);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //c
-                function c() {
-                    cxt.beginPath();
-                    cxt.moveTo(x + 55, y + 60);
-                    cxt.lineTo(x + 55, y + 110);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //d
-                function d() {
-                    cxt.beginPath();
-                    cxt.moveTo(x + 50, y + 115);
-                    cxt.lineTo(x, y + 115);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //e
-                function e() {
-                    cxt.beginPath();
-                    cxt.moveTo(x - 5, y + 110);
-                    cxt.lineTo(x - 5, y + 60);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //f
-                function f() {
-                    cxt.beginPath();
-                    cxt.moveTo(x - 5, y + 55);
-                    cxt.lineTo(x - 5, y + 5);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //g
-                function g() {
-                    cxt.beginPath();
-                    cxt.moveTo(x, y + 57.5);
-                    cxt.lineTo(x + 50, y + 57.5);
-                    cxt.closePath();
-                    cxt.stroke();
-                }
-
-                //0
-                function zero() {
-                    a(); b(); c(); d(); e(); f();
-                }
-                //1
-                function one() {
-                    b(); c();
-                }
-                //2
-                function two() {
-                    a(); b(); d(); e(); g();
-                }
-                //3
-                function three() {
-                    a(); b(); c(); d(); g();
-                }
-                //4
-                function four() {
-                    b(); c(); f(); g();
-                }
-                //5
-                function five() {
-                    a(); c(); d(); f(); g();
-                }
-                //6
-                function six() {
-                    a(); c(); d(); e(); f(); g();
-                }
-                //7
-                function seven() {
-                    a(); b(); c();
-                }
-                //8
-                function eight() {
-                    a(); b(); c(); d(); e(); f(); g();
-                }
-                //9
-                function nine() {
-                    a(); b(); c(); d(); f(); g();
-                }
-
-                //数字n
-                function number(n) {
-                    switch (n) {
-                        case 0: zero(); break;
-                        case 1: one(); break;
-                        case 2: two(); break;
-                        case 3: three(); break;
-                        case 4: four(); break;
-                        case 5: five(); break;
-                        case 6: six(); break;
-                        case 7: seven(); break;
-                        case 8: eight(); break;
-                        case 9: nine(); break;
-                    }
-                }
-                number(num);
-            }
-
-            showTime(1, 45);
-            setInterval("showTime(10,45)", 1000);
-        </script>
-    </body>
-</html>
-
+      
 
         
+        
+        
+
+        
+          
+          <div class="collection-title">
+            <h1 class="archive-year" id="archive-year-2020">2020</h1>
+          </div>
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2020/02/19/HexoRecovery/" itemprop="url">
+              
+                <span itemprop="name">HexoRecovery</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2020-02-19T13:48:19+08:00"
+              content="2020-02-19" >
+          02-19
+        </time>
       </div>
+
+    </header>
+  </article>
+
+
+
       
+
+        
+        
+        
+
+        
+        
+
+        
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+    <header class="post-header">
+
+      <h2 class="post-title">
+        
+            <a class="post-title-link" href="/2020/02/03/hello-world/" itemprop="url">
+              
+                <span itemprop="name">Hello World</span>
+              
+            </a>
+        
+      </h2>
+
+      <div class="post-meta">
+        <time class="post-time" itemprop="dateCreated"
+              datetime="2020-02-03T00:35:13+08:00"
+              content="2020-02-03" >
+          02-03
+        </time>
+      </div>
+
+    </header>
+  </article>
+
+
+
       
-      
+
     </div>
-    
-    
-    
   </div>
+  
+  
+  
+
+  
+
 
 
           </div>
@@ -573,10 +411,6 @@
 
 
           
-
-  
-
-
 
         </div>
         
@@ -873,10 +707,6 @@ color="0,0,255" opacity='0.9' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
 
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
-
-
 
   
 
@@ -1251,6 +1081,26 @@ color="0,0,255" opacity='0.9' zIndex="-2" count="99" src="//cdn.bootcss.com/canv
   
 
   
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
   
 
 
