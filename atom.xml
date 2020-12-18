@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2020-12-18T07:21:53.931Z</updated>
+  <updated>2020-12-18T07:43:57.107Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -17,13 +17,28 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>hexo博客绑定个人域名.md</title>
+    <link href="http://yoursite.com/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D-md/"/>
+    <id>http://yoursite.com/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D-md/</id>
+    <published>2020-12-18T07:42:55.000Z</published>
+    <updated>2020-12-18T07:43:57.107Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+  </entry>
+  
+  <entry>
     <title>hexo博客绑定个人域名</title>
     <link href="http://yoursite.com/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/"/>
     <id>http://yoursite.com/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/</id>
     <published>2020-12-18T05:30:30.000Z</published>
-    <updated>2020-12-18T07:21:53.931Z</updated>
+    <updated>2020-12-18T07:46:13.012Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="Hexo-个人域名绑定"><a href="#Hexo-个人域名绑定" class="headerlink" title="Hexo 个人域名绑定"></a>Hexo 个人域名绑定</h1><h2 id="两点前提："><a href="#两点前提：" class="headerlink" title="两点前提："></a>两点前提：</h2><ul><li>默认博客已经建好！</li><li>默认当事人已经购买了域名，且已经实名认证。（阿里云的、百度的…都可以）</li></ul><p>当然没有购买域名的同学，请往这里走：<a href="https://promotion.aliyun.com/ntms/act/domainbrand.html?spm=5176.8006371.772226.domainbackorder.b46f7e63AuIXBy" target="_blank" rel="noopener">阿里云域名注册</a></p><p>在注册域名时，还需要通过一个真实邮箱认证模板，因此需要一个可用的邮箱！</p><p>阿里云的实名认证还是很快的，说是两三个工作日内审核，但是我半个小时不到就通过了。</p><h2 id="正片开始"><a href="#正片开始" class="headerlink" title="正片开始"></a>正片开始</h2><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>先进入<a href="https://dc.console.aliyun.com/next/index?spm=5176.8006371.J_8058803260.1314.54897e63e7caJc#/domain/list/all-domain" target="_blank" rel="noopener">阿里云域名后台</a>，点击<img src="Image/点击解析.png" alt="点击解析"></p><p>按下快捷键<code>win+R</code>打开运行，运行<code>cmd</code>，ping您建好的博客地址，笔者的hexo博客部署在github上，因此需要这样做：</p><p><img src="Image/ping github.png" alt="ping github"></p><p>在域名解析设置添加两条记录：</p><ul><li>CNAME记录：设置您的github访问页</li><li>A记录：刚刚ping的IP</li></ul><p>可以参考下笔者的设置</p><p><img src="Image/设置.png" alt="设置"></p><h3 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h3><p>在<code>hexo根目录/source</code>文件夹中添加一个<code>CNAME</code>文件，注意文件无后缀，内容设置为您自己的域名：</p><p><img src="Image/CNAME.png" alt="CNAME"></p><p>保存之后。hexo三连即可！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><h2 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h2><p>可以使用域名访问自己的博客啦！</p>]]></content>
+    <content type="html"><![CDATA[<h1 id="Hexo-个人域名绑定"><a href="#Hexo-个人域名绑定" class="headerlink" title="Hexo 个人域名绑定"></a>Hexo 个人域名绑定</h1><h2 id="两点前提："><a href="#两点前提：" class="headerlink" title="两点前提："></a>两点前提：</h2><ul><li>默认博客已经建好！</li><li>默认当事人已经购买了域名，且已经实名认证。（阿里云的、百度的…都可以）</li></ul><p>当然没有购买域名的同学，请往这里走：<a href="https://promotion.aliyun.com/ntms/act/domainbrand.html?spm=5176.8006371.772226.domainbackorder.b46f7e63AuIXBy" target="_blank" rel="noopener">阿里云域名注册</a></p><p>在注册域名时，还需要通过一个真实邮箱认证模板，因此需要一个可用的邮箱！</p><p>阿里云的实名认证还是很快的，说是两三个工作日内审核，但是我半个小时不到就通过了。</p><h2 id="正片开始"><a href="#正片开始" class="headerlink" title="正片开始"></a>正片开始</h2><h3 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h3><p>先进入<a href="https://dc.console.aliyun.com/next/index?spm=5176.8006371.J_8058803260.1314.54897e63e7caJc#/domain/list/all-domain" target="_blank" rel="noopener">阿里云域名后台</a>，点击<img src="/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/点击解析.png" alt="点击解析"></p><p>按下快捷键<code>win+R</code>打开运行，运行<code>cmd</code>，ping您建好的博客地址，笔者的hexo博客部署在github上，因此需要这样做：</p><p><img src="/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/ping github.png" alt="ping github"></p><p>在域名解析设置添加两条记录：</p><ul><li>CNAME记录：设置您的github访问页</li><li>A记录：刚刚ping的IP</li></ul><p>可以参考下笔者的设置</p><p><img src="/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/设置.png" alt="设置"></p><h3 id="本地配置"><a href="#本地配置" class="headerlink" title="本地配置"></a>本地配置</h3><p>在<code>hexo根目录/source</code>文件夹中添加一个<code>CNAME</code>文件，注意文件无后缀，内容设置为您自己的域名：</p><p><img src="/2020/12/18/hexo%E5%8D%9A%E5%AE%A2%E7%BB%91%E5%AE%9A%E4%B8%AA%E4%BA%BA%E5%9F%9F%E5%90%8D/CNAME.png" alt="CNAME"></p><p>保存之后。hexo三连即可！</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure><h2 id="大功告成！"><a href="#大功告成！" class="headerlink" title="大功告成！"></a>大功告成！</h2><p>可以使用域名访问自己的博客啦！</p>]]></content>
     
     <summary type="html">
     
