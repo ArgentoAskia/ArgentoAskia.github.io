@@ -99,7 +99,7 @@
 <meta property="og:site_name" content="Askia&#39;s note">
 <meta property="og:description" content="线性代数复习知识点_1">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-12-11T12:01:36.038Z">
+<meta property="og:updated_time" content="2020-03-23T15:23:16.414Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -446,21 +446,26 @@
       
 
       
-        <h1 id="线性代数第一章知识点总结篇"><a href="#线性代数第一章知识点总结篇" class="headerlink" title="线性代数第一章知识点总结篇"></a>线性代数第一章知识点总结篇</h1><h2 id="行列式定义"><a href="#行列式定义" class="headerlink" title="行列式定义"></a><strong>行列式定义</strong></h2><h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a><strong>逆序数</strong></h2><p><strong>1.n!个n排列中，唯有123…(n–1)n是按顺序排列的，称该排列为==标准排列==</strong><br><br><strong>2.任意排列经过一次变换必将改变奇偶性</strong><br><br><strong>3.一段排列的逆序总数称为==逆序数==，例如:15243的逆序数为4，记==τ(15243)=4==</strong><br>(为了方便，以下用$\tau$标识)<br><strong>4.逆序数为偶数的排列称为==偶排列==，同样，逆序数为奇数的排列称为==奇排列==</strong></p>
+        <h1 id="线性代数第一章知识点总结篇"><a href="#线性代数第一章知识点总结篇" class="headerlink" title="线性代数第一章知识点总结篇"></a>线性代数第一章知识点总结篇</h1><h2 id="行列式定义"><a href="#行列式定义" class="headerlink" title="行列式定义"></a><strong>行列式定义</strong></h2><h2 id="逆序数"><a href="#逆序数" class="headerlink" title="逆序数"></a><strong>逆序数</strong></h2><p><strong>1.n!个n排列中，唯有123…(n–1)n是按顺序排列的，称该排列为<em>*</em></strong>标准排列<strong>*<br>
+</strong>2.任意排列经过一次变换必将改变奇偶性<strong><br>
+</strong>3.一段排列的逆序总数称为<strong>*</strong>逆序数<strong><em>，例如:15243的逆序数为4，记</em></strong>τ(15243)=4<strong>*<br>(为了方便，以下用$\tau$标识)<br>
+</strong>4.逆序数为偶数的排列称为<strong>*</strong>偶排列<strong>*，</strong>同样，逆序数为奇数的排列称为<strong>*</strong>奇排列<em>*</em><br></p>
 <h2 id="二阶行列式计算"><a href="#二阶行列式计算" class="headerlink" title="二阶行列式计算"></a><strong>二阶行列式计算</strong></h2><script type="math/tex; mode=display">
 \left|
  \begin{matrix}
    a & b \\
    c & d
   \end{matrix} 
-\right| =\sum_{j_1j_2}(-1)^{\tau(j_1j_2)}a_{1j1}a_{2j2}=  a*d-b*c</script><h2 id="三阶行列式计算"><a href="#三阶行列式计算" class="headerlink" title="三阶行列式计算"></a><strong>三阶行列式计算</strong></h2><script type="math/tex; mode=display">
+\right|</script><script type="math/tex; mode=display">
+=\sum_{j_1j_2}(-1)^{\tau(j_1j_2)}a_{1j1}a_{2j2}=  a*d-b*c</script><h2 id="三阶行列式计算"><a href="#三阶行列式计算" class="headerlink" title="三阶行列式计算"></a><strong>三阶行列式计算</strong></h2><script type="math/tex; mode=display">
 \left|
  \begin{matrix}
    a & b & c\\
    d & e & f\\
    g & h & i\\
   \end{matrix} 
-\right|  =\sum_{j_1j_2j_3}-1^{\tau(j_1j_2j_3)}a_{1j_1}a_{2j_2}a_{3j_3}
+\right|</script><script type="math/tex; mode=display">
+=\sum_{j_1j_2j_3}-1^{\tau(j_1j_2j_3)}a_{1j_1}a_{2j_2}a_{3j_3}
 = a*e*i+b*f*g+c*d*h-c*e*g-f*h*a-i*b*d</script><p><strong>对角线法则</strong></p>
 <h2 id="上下三角形"><a href="#上下三角形" class="headerlink" title="上下三角形"></a><strong>上下三角形</strong></h2><script type="math/tex; mode=display">
 \left|
@@ -477,7 +482,7 @@
    x & x & i\\
   \end{matrix} 
 \right| = 下三角</script><h2 id="注意点-杂项"><a href="#注意点-杂项" class="headerlink" title="注意点(杂项)"></a><strong>注意点(杂项)</strong></h2><p><strong>1.行列式中，==行列地位平等==</strong><br>(证明请看参考下篇的证明习题篇)<br><br><strong>2.一阶行列式 ==|a|=a==</strong><br><br><strong>3.代数和中每一项的正负号的决定方法：当行指标取成标准排列时，由列指标组成的排列的奇偶性确定，偶者为正，奇者为负</strong><br>见上面的$\tau(j_1j_2j_3)$</p>
-<h2 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a><strong>行列式性质</strong></h2><p><strong>1.D=D^T^(行列式行列互换，值不变)</strong><br><br>证明：</p>
+<h2 id="行列式性质"><a href="#行列式性质" class="headerlink" title="行列式性质"></a><strong>行列式性质</strong></h2><p><strong>1.D=D<sup>T</sup>(行列式行列互换，值不变)</strong><br><br>证明：</p>
 <script type="math/tex; mode=display">
 D=
 \left|
@@ -487,8 +492,10 @@ D=
    ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right| = \sum_{j_1j_2j_3}(-1)^{\tau(j_1j_2j_3)}b_{1j_1}b_{2j_2}b_{3j_3}…b_{nj_n}</script><script type="math/tex; mode=display">
-= \sum_{j_1j_2j_3}(-1)^{\tau(j_1j_2j_3)}b_{j_11}b_{j_22}b_{j_33}…b_{nj_n}
+\right|</script><script type="math/tex; mode=display">
+= \sum_{j_1j_2j_3}(-1)^{\tau(j_1j_2j_3)}b_{1j_1}b_{2j_2}b_{3j_3}…b_{nj_n}</script><script type="math/tex; mode=display">
+= \sum_{j_1j_2j_3}(-1)^{\tau(j_1j_2j_3)}b_{j_11}b_{j_22}b_{j_33}…b_{nj_n}</script><script type="math/tex; mode=display">
+=
 \left|
  \begin{matrix}
    b_{11} & b_{21} & ... & b_{n1}\\
@@ -510,7 +517,8 @@ D=
    ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right| = -
+\right| =</script><script type="math/tex; mode=display">
+-
 \left|
  \begin{matrix}
    b_{11} & b_{12} & ... & b_{1n}\\
@@ -546,7 +554,8 @@ D=
    ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right| = k
+\right| =</script><script type="math/tex; mode=display">
+k
 \left|
  \begin{matrix}
    b_{11} & b_{12} & ... & b_{1n}\\
@@ -577,7 +586,7 @@ D=
    ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right| = 
+\right| =</script><script type="math/tex; mode=display">
 \left|
  \begin{matrix}
    b_{11} & b_{12} & ... & b_{1n}\\
@@ -598,7 +607,7 @@ D=
          ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right| = 
+\right| =</script><script type="math/tex; mode=display">
 \left|
  \begin{matrix}
    b_{11} & b_{12} & ... & b_{1n}\\
@@ -607,7 +616,7 @@ D=
          ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right| +
+\right| +</script><script type="math/tex; mode=display">
 \left|
  \begin{matrix}
    b_{11} & b_{12} & ... & b_{1n}\\
@@ -635,7 +644,7 @@ D=
          ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right| +
+\right| +</script><script type="math/tex; mode=display">
 \left|
  \begin{matrix}
    b_{11} & b_{12} & ... & b_{1n}\\
@@ -644,7 +653,7 @@ D=
          ... & ... &     & ...\\
    b_{n1} & b_{n2} & ... & b_{nn}\\
   \end{matrix} 
-\right|+...
+\right|+...</script><script type="math/tex; mode=display">
 +
 \left|
  \begin{matrix}
@@ -669,7 +678,8 @@ M_{32}=
    b_{21}  &  b_{23}\\
   \end{matrix} 
 \right|</script><script type="math/tex; mode=display">
-A_{32} = (-1)^{3+2}M_{32}=(-1)^5M_{32}=-M_{32}</script><h4 id="3-n阶行列式D-a-ij-等于它的任意一行（列）的各元素与其对应的代数余子式（-A-ij-）乘积之和"><a href="#3-n阶行列式D-a-ij-等于它的任意一行（列）的各元素与其对应的代数余子式（-A-ij-）乘积之和" class="headerlink" title="3.n阶行列式D = |$a_{ij}$|等于它的任意一行（列）的各元素与其对应的代数余子式（$A_{ij}$）乘积之和"></a><strong>3.n阶行列式D = |$a_{ij}$|等于它的任意一行（列）的各元素与其对应的代数余子式（$A_{ij}$）乘积之和</strong></h4><p><strong>规则:利用行列式的性质，使某一行（列）尽可能地有较多的0，再按行列展开！</strong><br>例：</p>
+A_{32} = (-1)^{3+2}M_{32}</script><script type="math/tex; mode=display">
+=(-1)^5M_{32}=-M_{32}</script><h4 id="3-n阶行列式D-a-ij-等于它的任意一行（列）的各元素与其对应的代数余子式（-A-ij-）乘积之和"><a href="#3-n阶行列式D-a-ij-等于它的任意一行（列）的各元素与其对应的代数余子式（-A-ij-）乘积之和" class="headerlink" title="3.n阶行列式D = |$a_{ij}$|等于它的任意一行（列）的各元素与其对应的代数余子式（$A_{ij}$）乘积之和"></a><strong>3.n阶行列式D = |$a_{ij}$|等于它的任意一行（列）的各元素与其对应的代数余子式（$A_{ij}$）乘积之和</strong></h4><p><strong>规则:利用行列式的性质，使某一行（列）尽可能地有较多的0，再按行列展开！</strong><br>例：</p>
 <script type="math/tex; mode=display">
 D=
 \left|
@@ -679,7 +689,7 @@ D=
    2 & 4 & 3 & 1\\
    -1 & 1 & 2 & -2\\
   \end{matrix} 
-\right| 
+\right|</script><script type="math/tex; mode=display">
  = 
  \left|
  \begin{matrix}
@@ -706,7 +716,9 @@ D=
    ... & ... &     & ...\\
    *& * &*& b_{nn}\\
   \end{matrix} 
-\right| = b_{11}*b_{22}*b_{33}*...*b_{nn}=
+\right|</script><script type="math/tex; mode=display">
+= b_{11}*b_{22}*b_{33}*...*b_{nn}</script><script type="math/tex; mode=display">
+=
 \left|
  \begin{matrix}
    b_{11} & * & * & *\\
@@ -724,7 +736,8 @@ D=
    ... & ... &    .... & ...\\
    b_{n1}& * &*&*\\
   \end{matrix} 
-\right|=
+\right|</script><script type="math/tex; mode=display">
+=
 \left|
  \begin{matrix}
    *& * & * & b_{1n}\\
@@ -742,7 +755,8 @@ D=
    * & *&c_{11} & c_{12}\\
    *& * &c_{21}& c_{22}\\
   \end{matrix} 
-\right| =
+\right|</script><script type="math/tex; mode=display">
+=
 \left|
  \begin{matrix}
    b_{11} & b_{12} & * & *\\
@@ -750,7 +764,8 @@ D=
    0 & 0& c_{11} & c_{12}\\
    0& 0 &c_{21}& c_{22}\\
   \end{matrix} 
-\right| = 
+\right|</script><script type="math/tex; mode=display">
+= 
 \left|
  \begin{matrix}
    b_{11} & b_{12} \\
@@ -770,7 +785,8 @@ D=
    c_{11} & c_{12}&* & *\\
    c_{21}& c_{22}&*& * \\
   \end{matrix} 
-\right| =
+\right|</script><script type="math/tex; mode=display">
+=
 \left|
  \begin{matrix}
     * & * &b_{11} & b_{12}\\
@@ -778,20 +794,22 @@ D=
    c_{11} & c_{12}&0 & 0 \\
    c_{21}& c_{22}&0& 0 \\
   \end{matrix} 
-\right| = (-1)^{2*2}
+\right|</script><script type="math/tex; mode=display">
+= (-1)^{2*2}
 \left|
  \begin{matrix}
    b_{11} & b_{12} \\
     b_{21} & b_{22} \\
   \end{matrix} 
-\right|*
+\right|*</script><script type="math/tex; mode=display">
 \left|
  \begin{matrix}
   c_{11} & c_{12}\\
     c_{21}& c_{22}\\
   \end{matrix} 
 \right|</script><h3 id="范德蒙行列式"><a href="#范德蒙行列式" class="headerlink" title="范德蒙行列式"></a>范德蒙行列式</h3><script type="math/tex; mode=display">
-D=(a_1,a_2,...,a_n)=
+D=(a_1,a_2,...,a_n)</script><script type="math/tex; mode=display">
+=
 \left|
  \begin{matrix}
   1& 1&... & 1\\
@@ -800,7 +818,8 @@ D=(a_1,a_2,...,a_n)=
    ... & ... &    ... & ...\\
    a_1^{(n-1)}& a_2^{(n-1)}&... & a_n^{(n-1)}\\
   \end{matrix} 
-\right| = 
+\right|</script><script type="math/tex; mode=display">
+= 
 \prod_{1≤i<j≤n}(a_j-a_i)</script><h2 id="重要行列式解法"><a href="#重要行列式解法" class="headerlink" title="重要行列式解法"></a>重要行列式解法</h2><h3 id="type1"><a href="#type1" class="headerlink" title="type1:"></a>type1:</h3><script type="math/tex; mode=display">
 f(x)=
 \left|
@@ -812,7 +831,8 @@ f(x)=
    a_1& a_2&a_3&... & x&1\\
    a_1& a_2&a_3&... & a_n&1\\
   \end{matrix} 
-\right| = 
+\right|</script><script type="math/tex; mode=display">
+= 
 \left|
  \begin{matrix}
   x-a_1& a_1-x&0&...&0 & 0\\
@@ -841,7 +861,8 @@ f(x)=
    ... & ... &    ... & ...&    ...\\
   b&b& b&...&a  \\
   \end{matrix} 
-\right| = 
+\right|</script><script type="math/tex; mode=display">
+= 
 \left|
  \begin{matrix}
   a+(n-1)b& b& b&...& b\\
@@ -850,7 +871,8 @@ f(x)=
    ... & ... &    ... & ...&    ...\\
   a+(n-1)b&b& b&...&a  \\
   \end{matrix} 
-\right| (提取a+(n-1)b)</script><script type="math/tex; mode=display">=[a+(n-1)b]
+\right| (提取a+(n-1)b)</script><script type="math/tex; mode=display">
+=[a+(n-1)b]
 \left|
  \begin{matrix}
   1 & b& b&...& b\\
@@ -859,7 +881,7 @@ f(x)=
    ... & ... &    ... & ...&    ...\\
  1&b& b&...&a  \\
   \end{matrix} 
-\right|  
+\right|</script><script type="math/tex; mode=display">
 =[a+(n-1)b]
 \left|
  \begin{matrix}
@@ -900,8 +922,8 @@ f(x)=
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/28/GTK-CodeBlock%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="next" title="GTK+CodeBlock（windows）环境搭建">
-                <i class="fa fa-chevron-left"></i> GTK+CodeBlock（windows）环境搭建
+              <a href="/2019/12/11/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E7%BB%93-2/" rel="next" title="线性代数知识点总结">
+                <i class="fa fa-chevron-left"></i> 线性代数知识点总结
               </a>
             
           </div>
@@ -910,8 +932,8 @@ f(x)=
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/12/11/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0%E7%9F%A5%E8%AF%86%E7%82%B9%E6%80%BB%E7%BB%93%E7%BB%93-2/" rel="prev" title="线性代数知识点总结">
-                线性代数知识点总结 <i class="fa fa-chevron-right"></i>
+              <a href="/2020/02/03/hello-world/" rel="prev" title="Hello World">
+                Hello World <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -993,7 +1015,7 @@ f(x)=
               
                 <a href="/archives/%7C%7C%20archive">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -1004,7 +1026,7 @@ f(x)=
               
               <div class="site-state-item site-state-categories">
                 <a href="/categories/index.html">
-                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-count">7</span>
                   <span class="site-state-item-name">categories</span>
                 </a>
               </div>
@@ -1015,7 +1037,7 @@ f(x)=
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">11</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -1090,7 +1112,7 @@ f(x)=
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">3.9k</span>
+    <span title="Site words total count">4.9k</span>
   
 -->
 
@@ -1112,7 +1134,7 @@ f(x)=
 -->
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">博客全站共3.9k字</span>
+  <span class="post-count">博客全站共4.9k字</span>
 </div>
 
         

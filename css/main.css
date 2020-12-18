@@ -1824,7 +1824,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #ff8f4e;
+  background: #1aff61;
 }
 .links-of-blogroll {
   font-size: 13px;
@@ -3030,4 +3030,12 @@ body {
   background: rgba(255,255,255,0.2) none repeat scroll !important;
   -webkit-box-shadow: 0 0 5px rgba(202,203,203,0.9);
   -moz-box-shadow: 0 0 5px rgba(202,203,204,0.9);
+}
+.site-nav-toggle {
+  top: 0;
+  -webkit-transform: translateY(78%);
+  -moz-transform: translateY(78%);
+  -ms-transform: translateY(78%);
+  -o-transform: translateY(78%);
+  transform: translateY(78%);
 }
