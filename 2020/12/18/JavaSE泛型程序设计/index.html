@@ -78,7 +78,7 @@
 
 
 
-  <meta name="keywords" content="language C,struct," />
+  <meta name="keywords" content="Hexo, NexT" />
 
 
 
@@ -91,15 +91,14 @@
 
 
 
-<meta name="description" content="实现结构体变量可以被外部定义却无法改变其成员的值（保护）">
-<meta name="keywords" content="language C,struct">
+<meta name="description" content="javase——泛型泛型定义泛型类泛型方法泛型原理泛型限定类型擦除泛型转换限制和注意点泛型继承泛型通配符反射与泛型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="C语言隐藏结构体的实现方法">
-<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2019&#x2F;11&#x2F;26&#x2F;C%E8%AF%AD%E8%A8%80%E9%9A%90%E8%97%8F%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95&#x2F;index.html">
+<meta property="og:title" content="JavaSE泛型程序设计">
+<meta property="og:url" content="http:&#x2F;&#x2F;yoursite.com&#x2F;2020&#x2F;12&#x2F;18&#x2F;JavaSE%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1&#x2F;index.html">
 <meta property="og:site_name" content="Askia">
-<meta property="og:description" content="实现结构体变量可以被外部定义却无法改变其成员的值（保护）">
+<meta property="og:description" content="javase——泛型泛型定义泛型类泛型方法泛型原理泛型限定类型擦除泛型转换限制和注意点泛型继承泛型通配符反射与泛型">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-11-26T05:56:45.789Z">
+<meta property="og:updated_time" content="2020-12-18T17:37:06.315Z">
 <meta name="twitter:card" content="summary">
 
 
@@ -130,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/11/26/C语言隐藏结构体的实现方法/"/>
+  <link rel="canonical" href="http://yoursite.com/2020/12/18/JavaSE泛型程序设计/"/>
 
 
 
 
 
-  <title>C语言隐藏结构体的实现方法 | Askia</title>
+  <title>JavaSE泛型程序设计 | Askia</title>
   
 
 
@@ -317,7 +316,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/11/26/C%E8%AF%AD%E8%A8%80%E9%9A%90%E8%97%8F%E7%BB%93%E6%9E%84%E4%BD%93%E7%9A%84%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%B3%95/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/18/JavaSE%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Askia">
@@ -334,7 +333,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">C语言隐藏结构体的实现方法</h1>
+          <h1 class="post-title" itemprop="name headline">JavaSE泛型程序设计</h1>
         
 
         <div class="post-meta">
@@ -346,8 +345,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-11-26T13:22:09+08:00">
-                2019-11-26
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-18T23:43:48+08:00">
+                2020-12-18
               </time>
             
 
@@ -356,28 +355,6 @@
             
           </span>
 
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-Struct/" itemprop="url" rel="index">
-                    <span itemprop="name">C_Struct</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
           
 
           
@@ -405,7 +382,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  587
+                  50
                 </span>
               
 
@@ -421,16 +398,12 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  1
                 </span>
               
             </div>
           
 
-          
-              <div class="post-description">
-                  实现结构体变量可以被外部定义却无法改变其成员的值（保护）
-              </div>
           
 
         </div>
@@ -446,61 +419,7 @@
       
 
       
-        <h1 id="前言："><a href="#前言：" class="headerlink" title="前言："></a>前言：</h1><p>前些天在搞win32，被windows花里胡哨的结构弄得生不如死，脑子里莫名其妙蹦出了一个想法：能不能定义一些结构体，外部可以用它来定义变量，然而却不能改变它的成员的值, 就像C++，Java一类语言的class一样对数据进行保护。<del>好吧，其实是我还没吃饱撑着随便乱搞</del><br>参照了网上很多的说法，自己胡乱地搞了几个小时给弄出来了。</p>
-<h1 id="正文："><a href="#正文：" class="headerlink" title="正文："></a>正文：</h1><p>直接上代码:<br><br><code>book.cpp</code></p>
-<pre><code>#include &quot;book.h&quot;
-struct book{
-    int price;
-    char *name;
-};
-
-PBOOK CreateBook(int price, char *name)
-{
-    PBOOK Book1 = (PBOOK)malloc(sizeof(BOOK));
-    Book1-&gt;price = 100;
-    Book1-&gt;name = 0;
-    return Book1;
-}
-
-void FreeBook(PBOOK book)
-{
-    free(book);
-} 
-</code></pre><p>上述源代码文件定义了一个结构和两个函数，同时包含一个自身的头文件</p>
-<p><code>book.h</code></p>
-<pre><code>#include &lt;malloc.h&gt;
-#define PBOOK BOOK *
-
-struct book;
-typedef struct book BOOK;
-
-PBOOK CreateBook(int price, char *name);
-void FreeBook(PBOOK book);
-</code></pre><p>头文件中声明了两个函数和结构体，其中用typedef给结构体定义为一种类型。因为源代码文件会包含这个头文件，<strong>所以在源代码中也可以使用头文件中的宏</strong></p>
-<p><code>main.cpp</code></p>
-<pre><code>#include &lt;stdio.h&gt;
-#include &quot;book.h&quot;
-int main()
-{
-    PBOOK a = CreateBook(20, &quot;1231321231&quot;);    // 定义的变量必须是指针类型 
-    printf(&quot;%d&quot;,a);
- } 
-</code></pre><p>注意定义的BOOK类型 <strong>必须是指针（BOOK *类型，参照头文件的宏定义）</strong> 一旦定义为</p>
-<pre><code>BOOK a；
-</code></pre><p>就会报错，因为我们包含的头文件只有BOOK的声明，定义为BOOK a的话编译器不知道要给a分配多少内存空间，会引发以下类似类型错误：</p>
-<pre><code>[Error] variable &#39;BOOK a&#39; has initializer but incomplete type
-</code></pre><p>编译通过之后，可以用printf函数打印分配的地址，看下是否分配成功！<br>这样定义的变量的所有对成员的操作都要写到源代码文件中（包括基本的输入输出函数都要），因为在主函数中，这些变量的成员的值无法被直接更改！<br>如：</p>
-<p><code>main.cpp</code></p>
-<pre><code>#include &lt;stdio.h&gt;
-#include &quot;book.h&quot;
-int main()
-{
-    PBOOK a = CreateBook(20, &quot;1231321231&quot;);    // 定义的变量必须是指针类型 
-    printf(&quot;%d %d&quot;,a, a-&gt;price);
- } 
-</code></pre><p>编译器会报类型错误，</p>
-<pre><code>[Error] invalid use of incomplete type &#39;BOOK {aka struct book}&#39;
-</code></pre>
+        <h1 id="javase——泛型"><a href="#javase——泛型" class="headerlink" title="javase——泛型"></a>javase——泛型</h1><h2 id="泛型定义"><a href="#泛型定义" class="headerlink" title="泛型定义"></a>泛型定义</h2><h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><h2 id="泛型原理"><a href="#泛型原理" class="headerlink" title="泛型原理"></a>泛型原理</h2><h3 id="泛型限定"><a href="#泛型限定" class="headerlink" title="泛型限定"></a>泛型限定</h3><h3 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h3><h3 id="泛型转换"><a href="#泛型转换" class="headerlink" title="泛型转换"></a>泛型转换</h3><h2 id="限制和注意点"><a href="#限制和注意点" class="headerlink" title="限制和注意点"></a>限制和注意点</h2><h2 id="泛型继承"><a href="#泛型继承" class="headerlink" title="泛型继承"></a>泛型继承</h2><h2 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h2><h2 id="反射与泛型"><a href="#反射与泛型" class="headerlink" title="反射与泛型"></a>反射与泛型</h2>
       
     </div>
     
@@ -515,14 +434,6 @@ int main()
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/language-C/" rel="tag"># language C</a>
-          
-            <a href="/tags/struct/" rel="tag"># struct</a>
-          
-        </div>
-      
 
       
       
@@ -532,8 +443,8 @@ int main()
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/11/24/stdarg-h%E5%AE%9E%E7%8E%B0%E4%B8%8D%E5%AE%9A%E5%8F%82%E6%95%B0/" rel="next" title="stdarg.h实现可变参数">
-                <i class="fa fa-chevron-left"></i> stdarg.h实现可变参数
+              <a href="/2020/12/18/%E8%A7%A3%E5%86%B3hexo%E9%83%A8%E7%BD%B2%E5%88%B0github%E4%B8%8A%E5%9B%BE%E7%89%87%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E9%97%AE%E9%A2%98/" rel="next" title="解决hexo部署到github上图片无法显示的问题">
+                <i class="fa fa-chevron-left"></i> 解决hexo部署到github上图片无法显示的问题
               </a>
             
           </div>
@@ -541,10 +452,6 @@ int main()
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/11/28/GTK-CodeBlock%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/" rel="prev" title="GTK+CodeBlock（windows）环境搭建">
-                GTK+CodeBlock（windows）环境搭建 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -687,7 +594,7 @@ int main()
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#前言："><span class="nav-number">1.</span> <span class="nav-text">前言：</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#正文："><span class="nav-number">2.</span> <span class="nav-text">正文：</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javase——泛型"><span class="nav-number">1.</span> <span class="nav-text">javase——泛型</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型定义"><span class="nav-number">1.1.</span> <span class="nav-text">泛型定义</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型类"><span class="nav-number">1.1.1.</span> <span class="nav-text">泛型类</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型方法"><span class="nav-number">1.1.2.</span> <span class="nav-text">泛型方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型原理"><span class="nav-number">1.2.</span> <span class="nav-text">泛型原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型限定"><span class="nav-number">1.2.1.</span> <span class="nav-text">泛型限定</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#类型擦除"><span class="nav-number">1.2.2.</span> <span class="nav-text">类型擦除</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#泛型转换"><span class="nav-number">1.2.3.</span> <span class="nav-text">泛型转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#限制和注意点"><span class="nav-number">1.3.</span> <span class="nav-text">限制和注意点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型继承"><span class="nav-number">1.4.</span> <span class="nav-text">泛型继承</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#泛型通配符"><span class="nav-number">1.5.</span> <span class="nav-text">泛型通配符</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#反射与泛型"><span class="nav-number">1.6.</span> <span class="nav-text">反射与泛型</span></a></li></ol></li></ol></div>
             
 
           </div>
