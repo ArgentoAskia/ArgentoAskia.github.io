@@ -1,6 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>计算机网络笔记——互联网网络</title>
+    <url>/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/</url>
+    <content><![CDATA[<h1 id="互联网"><a href="#互联网" class="headerlink" title="互联网"></a>互联网</h1><h2 id="三大网络及特点"><a href="#三大网络及特点" class="headerlink" title="三大网络及特点"></a>三大网络及特点</h2><ul>
+<li>电信网络：提供电话、电报及传真等服务</li>
+<li>有线电视网络：向用户传送各种电视节目</li>
+<li>计算机网络：使用户能够在计算机之间传送数据文件</li>
+</ul>
+<p>计算机网路特点可以概括为<strong>连通性</strong>和<strong>共享</strong></p>
+<ul>
+<li>连通性：互联网上用户，不管相距多远、都能非常便捷地、非常经济地交换各种信息，就像终端直连一样方便。</li>
+<li>共享：即资源共享。（信息、软件、硬件…）</li>
+</ul>
+<h2 id="计算机网络基本概念"><a href="#计算机网络基本概念" class="headerlink" title="计算机网络基本概念"></a>计算机网络基本概念</h2><p>计算机网络 = 结点+链路</p>
+<p>结点：计算机、集线器、路由器、交换机等</p>
+<p><strong>网络把许多计算机连接在一起，而互联网则把许多网络通过路由器连接在一起。与网络相连接的计算机常称为主机</strong></p>
+<p>==<strong>Internet是指当前全球最大的、开放的、由众多网络互相连接而成的特定互联网，它采用TCP/IP协议族作为通信规则、且前身是美国的ARPANET</strong>==</p>
+<h2 id="计算机发展三阶段"><a href="#计算机发展三阶段" class="headerlink" title="计算机发展三阶段"></a>计算机发展三阶段</h2><h3 id="阶段一：单个网络ARPANET向互联网发展。"><a href="#阶段一：单个网络ARPANET向互联网发展。" class="headerlink" title="阶段一：单个网络ARPANET向互联网发展。"></a>阶段一：单个网络ARPANET向互联网发展。</h3><p>单一分组交换网，所有要接入ARPANET上的主机都是直接与就近的结点交换机相连，此时的交换网并非是互联的，而是多分组结构，组与组之间互不连通。为了解决这个问题，人们开始研究，才有了互联网的雏形。</p>
+<p>==<strong>1983年，TCP/IP成为ARPANET的标准协议</strong>==</p>
+<h3 id="阶段二：三级结构互联网"><a href="#阶段二：三级结构互联网" class="headerlink" title="阶段二：三级结构互联网"></a>阶段二：三级结构互联网</h3><p>美国国家基金会（NSF）围绕六个大型计算机中心建立的计算机网络（NSFNET），该计算机网络分三级：<strong>主干网、地区网、校园网（或企业网）</strong>，这三级网络覆盖全美主要的大学和研究所。1991年，政府为扩大网络，将互联网的主干网交由私人公司负责经营，收取接入费。</p>
+<h3 id="阶段三：多层次ISP结构互联网"><a href="#阶段三：多层次ISP结构互联网" class="headerlink" title="阶段三：多层次ISP结构互联网"></a>阶段三：多层次ISP结构互联网</h3><p>随着NSFNET被若干个互联网主干网代替，出现了新名词：<strong>互联网服务提供者（商）（ISP）</strong></p>
+<p>现在国内常见的提供商主要有：电信、移动、联通。</p>
+<h2 id="计算机网络标准"><a href="#计算机网络标准" class="headerlink" title="计算机网络标准"></a>计算机网络标准</h2><p>所有互联网标准都是以<strong>RFC文档</strong>的形式在互联网上发表的，至今为止，无数的RFC标准文档中<strong>只有少数被认可为互联网的标准</strong></p>
+<p>通常标准生成需要三个阶段：</p>
+<ul>
+<li>互联网草案（Internet Draft）：在这个阶段还不算是RFC文档</li>
+<li>建议标准（Proposed Standard）：开始算是RFC文档</li>
+<li>互联网标准（Internet Standard）：分配RFC编号RFCXXX，与一个或者多个其他RFC关联。</li>
+</ul>
+<h2 id="互联网组成"><a href="#互联网组成" class="headerlink" title="互联网组成"></a>互联网组成</h2><p><img src="/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/组成.jpg" alt="组成"></p>
+<h3 id="边缘部分"><a href="#边缘部分" class="headerlink" title="边缘部分"></a>边缘部分</h3><p>所有连接在互联网上的<strong>主机</strong>组成，<strong>用户直接使用的</strong>，用来进行通信和资源共享</p>
+<p>所谓<strong>计算机通信</strong>：<strong>指的是主机A上的某个进程和主机B上的另一个进程进行通信</strong>，因此，诞生了两种通信方式：</p>
+<h4 id="客户端-服务器方式（C-S模式）"><a href="#客户端-服务器方式（C-S模式）" class="headerlink" title="客户端-服务器方式（C-S模式）"></a>客户端-服务器方式（C-S模式）</h4><p><img src="/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/CS1.jpg" alt="CS1"></p>
+<p>如上图，客户端进程向服务端进程请求服务，服务端进程向客户端进程提供服务，也就是说：<strong>客户端是服务请求进程，服务端是服务提供进程</strong></p>
+<p>服务器和客户通信建立后，<strong>通信是双向的，双方都可以发送和接受数据</strong>。</p>
+<p>由于通信需要，CS模式<strong>也不一定是单一的</strong>，服务端应该具备提供某种特定服务并且<strong>同时处理多个客户请求的能力</strong>，因此可以演化为：</p>
+<p><img src="/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/CS2.gif" alt="CS2"></p>
+<h4 id="对等连接方式"><a href="#对等连接方式" class="headerlink" title="对等连接方式"></a>对等连接方式</h4><p>连接中的每一台主机既是客户机又是服务器，通常在资源传输上，P2P速度会比普通的下载快，因为其中一台主机下载完整资源可以从多在主机中同时下载部分资源再进行合并：</p>
+<p><img src="/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/p2p.jpg" alt="p2p"></p>
+<h3 id="核心部分"><a href="#核心部分" class="headerlink" title="核心部分"></a>核心部分</h3><p>核心部分为互联网中最复杂的部分，在网络核心部分起特殊作用的路由器（router），主要实现分组交换、其任务是转发收到的分组，要了解分组交换，需要先介绍电路交换！</p>
+<h4 id="电路交换"><a href="#电路交换" class="headerlink" title="电路交换"></a>电路交换</h4><p>交换就是按照某种方式动态地分配传输线路地资源。</p>
+<p>电路交换基本过程是：<strong>建立连接（占用通信通路） —&gt; 通话（持续占用通信资源） —&gt; 释放连接（归还通信资源）</strong></p>
+<h4 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h4><p>只管下一个发送目的是谁，（由路由接受，放在缓存，找到空闲的链路，转发）X n次，像这样：</p>
+<p><img src="/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/u=2251040850,280662883&amp;fm=26&amp;gp=0.png" alt="u=2251040850,280662883&amp;fm=26&amp;gp=0"></p>
+<p>然后他们的区别是：</p>
+<p><img src="/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/分组交换.jpg" alt="分组交换"></p>
+<h2 id="网络分类"><a href="#网络分类" class="headerlink" title="网络分类"></a>网络分类</h2><h3 id="作用范围分类："><a href="#作用范围分类：" class="headerlink" title="作用范围分类："></a>作用范围分类：</h3><h4 id="广域网："><a href="#广域网：" class="headerlink" title="广域网："></a>广域网：</h4><p>Wide Area Network（WAN），作用范围几十到几千公里，也叫远程网</p>
+<h4 id="城域网："><a href="#城域网：" class="headerlink" title="城域网："></a>城域网：</h4><p>Metropolitan Area Network（MAN），作用范围一般是5-50km，一个城市大小的网络，大多数采用的是以太网技术。</p>
+<h4 id="局域网："><a href="#局域网：" class="headerlink" title="局域网："></a>局域网：</h4><p>Local Area Network（LAN），常见的就是校园网和企业网，范围大概是1公里左右</p>
+<h4 id="个人区域网："><a href="#个人区域网：" class="headerlink" title="个人区域网："></a>个人区域网：</h4><p>Personal Area Network（PAN）个人设备网络，10m左右范围</p>
+<h3 id="网络使用者分类："><a href="#网络使用者分类：" class="headerlink" title="网络使用者分类："></a>网络使用者分类：</h3><h4 id="公用网："><a href="#公用网：" class="headerlink" title="公用网："></a>公用网：</h4><p>电信公司建立的大型网络，钱给够了就能接。</p>
+<h4 id="专用网："><a href="#专用网：" class="headerlink" title="专用网："></a>专用网：</h4><p>特殊业务用途的网络，比如银行，军队等…</p>
+<h3 id="接入网："><a href="#接入网：" class="headerlink" title="接入网："></a>接入网：</h3><p>也叫AN（Access Network）,又称本地接入网或者居民接入网。接入网是从某个端系统（主机）到另一个端系统（主机）的路径中，由这个端系统到第一个路由器（边缘路由器）之间的一些物理链路组成。</p>
+<h2 id="性能指标"><a href="#性能指标" class="headerlink" title="性能指标"></a>性能指标</h2><h3 id="速率"><a href="#速率" class="headerlink" title="速率"></a>速率</h3><p>数据的传送速率，也叫<strong>数据率</strong>或者<strong>比特率</strong>，单位是<strong>bit/s</strong>，简写就是<strong>b</strong></p>
+<p>1kb = 10$^3$b，1Mb = 10$^6$b，…</p>
+<h3 id="带宽"><a href="#带宽" class="headerlink" title="带宽"></a>带宽</h3><p>两个意思：</p>
+<ul>
+<li>某个信号具有的频带宽度，如电话信号的标准带宽为<strong>3.1kHz</strong></li>
+<li>表示网络中某通道传送数据的能力，单位也是bit/s</li>
+</ul>
+<h3 id="吞吐量"><a href="#吞吐量" class="headerlink" title="吞吐量"></a>吞吐量</h3><p>单位时间内通过某个网络的实际数据量</p>
+<h3 id="时延"><a href="#时延" class="headerlink" title="时延"></a>时延</h3><p>数据从网络的一端传送到另一端所需要的时间，也叫<strong>延迟</strong>或<strong>迟延</strong>。</p>
+<h4 id="发送时延"><a href="#发送时延" class="headerlink" title="发送时延"></a>发送时延</h4><h4 id="传播时延"><a href="#传播时延" class="headerlink" title="传播时延"></a>传播时延</h4><h4 id="处理时延"><a href="#处理时延" class="headerlink" title="处理时延"></a>处理时延</h4><h4 id="排队时延"><a href="#排队时延" class="headerlink" title="排队时延"></a>排队时延</h4><h3 id="利用率"><a href="#利用率" class="headerlink" title="利用率"></a>利用率</h3><p><strong>信道和网络的利用率过高会产生非常大的延迟。</strong></p>
+<h4 id="信道利用率"><a href="#信道利用率" class="headerlink" title="信道利用率"></a>信道利用率</h4><p>某信道有百分之几的时间是被利用的（有数据通过）</p>
+<h4 id="网络利用率"><a href="#网络利用率" class="headerlink" title="网络利用率"></a>网络利用率</h4><p>全网络的信道利用率的加权平均值</p>
+<h2 id="体系结构及其演变"><a href="#体系结构及其演变" class="headerlink" title="体系结构及其演变"></a>体系结构及其演变</h2><p>系统网络体系结构（SNA）—&gt; OSI/RM模型 —&gt; TCP/IP —&gt; 五层结构</p>
+<h3 id="协议"><a href="#协议" class="headerlink" title="协议"></a>协议</h3><p>为了进行网络中的数据交换而建立的规则，也叫网络协议，由<strong>语法、语义、同步</strong>三要素组成。<strong>协议中的各层及其协议的集合，称为网络的体系结构。</strong></p>
+<h3 id="分层模型"><a href="#分层模型" class="headerlink" title="分层模型"></a>分层模型</h3><p>无论是OSI/RM还是TCP/IP都是一种分层结构，这样的分层结构带来的好处：</p>
+<ol>
+<li>各层之间相互独立</li>
+<li>灵活性好</li>
+<li>结构上可分割开</li>
+<li>易于实现和维护</li>
+<li>促进标准化工作</li>
+</ol>
+<h3 id="五层结构体系"><a href="#五层结构体系" class="headerlink" title="五层结构体系"></a>五层结构体系</h3><p>五层协议体系结构由应用层、运输层、网络层、数据链路层、物理层组成，运输层最重要的是TCP和UDP协议，而网络层的协议是IP协议。</p>
+<p><img src="/2020/12/22/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%AC%94%E8%AE%B0%E2%80%94%E2%80%94%E4%BA%92%E8%81%94%E7%BD%91%E7%BD%91%E7%BB%9C/计算机网络笔记——互联网网络\体系.jpg" alt="体系"></p>
+<p>每层所要完成的功能主要:</p>
+<ul>
+<li>[ ] 差错控制</li>
+<li>[ ] 流量控制</li>
+<li>[ ] 分段和重装</li>
+<li>[ ] 复用和分用</li>
+<li>[ ] 连接建立和释放</li>
+</ul>
+]]></content>
+      <categories>
+        <category>计算机网络</category>
+      </categories>
+      <tags>
+        <tag>计算机网络</tag>
+        <tag>爷的光纤接上了</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>JavaSE泛型程序设计</title>
     <url>/2020/12/18/JavaSE%E6%B3%9B%E5%9E%8B%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1/</url>
     <content><![CDATA[<h1 id="javase——泛型"><a href="#javase——泛型" class="headerlink" title="javase——泛型"></a>javase——泛型</h1><h2 id="泛型定义"><a href="#泛型定义" class="headerlink" title="泛型定义"></a>泛型定义</h2><h3 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h3><h3 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h3><h2 id="泛型原理"><a href="#泛型原理" class="headerlink" title="泛型原理"></a>泛型原理</h2><h3 id="泛型限定"><a href="#泛型限定" class="headerlink" title="泛型限定"></a>泛型限定</h3><h3 id="类型擦除"><a href="#类型擦除" class="headerlink" title="类型擦除"></a>类型擦除</h3><h3 id="泛型转换"><a href="#泛型转换" class="headerlink" title="泛型转换"></a>泛型转换</h3><h2 id="限制和注意点"><a href="#限制和注意点" class="headerlink" title="限制和注意点"></a>限制和注意点</h2><h2 id="泛型继承"><a href="#泛型继承" class="headerlink" title="泛型继承"></a>泛型继承</h2><h2 id="泛型通配符"><a href="#泛型通配符" class="headerlink" title="泛型通配符"></a>泛型通配符</h2><h2 id="反射与泛型"><a href="#反射与泛型" class="headerlink" title="反射与泛型"></a>反射与泛型</h2>]]></content>
